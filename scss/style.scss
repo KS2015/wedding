@@ -1,0 +1,267 @@
+$navy: #001626;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $navy;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.mr--40 {
+  margin-right: 40px;
+}
+
+.mb--25 {
+  margin-bottom: 25px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: auto;
+  }
+}
+.row {
+  &__one-third {
+    grid-template-columns: 40% 60%;
+    @media screen and (max-width: 1130px) {
+      grid-template-columns: 50% 50%;
+    }
+    @media screen and (max-width: 640px) {
+      grid-template-columns: auto;
+    }
+  }
+}
+.row-full {
+  @extend .row;
+  grid-template-columns: 100%;
+}
+
+.font--light {
+  font-weight: 300;
+}
+
+.nav {
+  background-color: $navy;
+  &__top {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    list-style-type: none;
+    color: white;
+    padding: 20px 20px 0;
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+  &__middle {
+    &__title {
+      text-align: center;
+      color: white;
+      font-size: 40px;
+      padding: 10px 20px;
+      @media screen and (max-width: 640px) {
+        padding: 20px;
+      }
+    }
+  }
+  &__bottom {
+    padding: 20px;
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+}
+
+.nav__list-item {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
+}
+
+.nav__list-item-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav--list-item-link--active {
+  border: 1px solid white;
+}
+
+.nav--left {
+  text-align: left;
+}
+
+.nav--right {
+  text-align: right;
+}
+
+.nav--center {
+  text-align: center;
+}
+
+.hero {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 800px;
+  &__image-holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: brightness(.85);
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 0;
+    right: 0;
+    font-size: 60px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0px 0px 10px #3c3c3c;
+  }
+}
+
+.information {
+  background-color: $navy;
+  color: white;
+  padding: 20px;
+  height: 400px;
+  position: relative;
+  &::before {
+    content: url('../images/glitter.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: url('../images/glitter-right.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.content {
+  position: relative; 
+  height: 100%;
+  .content--center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%; 
+  }
+}
+
+.hashtag {
+  background-color: $navy;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  &__holder {
+    position: relative;
+    h3 {
+      &::before,
+      &::after {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid white;
+        width: 100px;
+        margin: 0 1rem;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+.paragraph {
+  padding: 175px 20px 125px;
+  background-color: $navy;
+  text-align: center;
+  color: white;
+  .row-full {
+    max-width: 800px;
+  }
+}
+.paragraph__image {
+  position: relative;
+}
+img {
+  &#image-1 {
+    position: absolute;
+    left: 25px;
+    top: -100px;
+    z-index: 1;
+    max-height: 500px;
+    width: auto;
+    box-shadow: 5px -5px 10px #00000075;
+    @media screen and (max-width: 1130px) {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      left: 0;
+    }
+    @media screen and (max-width: 640px) {
+      top: 50px;
+      left: 0;
+    }
+  }
+  &#image-2 {
+    position: absolute;
+    right: 25px;
+    z-index: 2;
+    max-height: 500px;
+    width: auto;
+    box-shadow: 5px 0px 10px #00000075;
+    @media screen and (max-width: 1130px) {
+      display: none;
+    }
+  }
+}
