@@ -24,8 +24,9 @@
       </div>
       <div class="nav__middle">
         <h1 class="nav__middle__title">KYLE & TARA</h1>
+        <span class="mobile__menu--button" id="mobile__menu--button">&#9776;</span>
       </div>
-      <div class="nav__bottom">
+      <div class="nav__bottom" id="nav__bottom">
         <ul class="nav__list nav--center">
           <li class="nav__list-item mr--40"><a href="/" class="nav__list-item-link nav--list-item-link--active">HOME</a></li>
           <li class="nav__list-item mr--40"><a href="" class="nav__list-item-link">TRAVEL & ACCOMODATIONS</a></li>
@@ -103,22 +104,22 @@
     </div>
     <form name="RSVP Form" method="post" netlify>
       <div class="row">
-        <p class="hidden">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-        </p>
         <label>Name <input type="text" name="name" placeholder="Name" required></label>
         <label>Phone Number <input type="text" name="phonenumber" placeholder="Phone Number" required></label>
         <label>Are You Attending?
           <select name="attending" required>
-            <option selected disabled>Please select an option</option>
-            <option value="">Yes, I'll be there!</option>
-            <option value="">No, I can't make it</option>
+            <!-- <option>Please select an option</option> -->
+            <option value="Yes, I'll be there!">Yes, I'll be there!</option>
+            <option value="No, I can't make it.">No, I can't make it</option>
           </select>
         </label>
         <label>Names of Guest(s)
-          <textarea name="" id="" cols="30" rows="4" placeholder="Names of guests, including yourself" required></textarea>
+          <textarea name="namesofguests" id="" cols="30" rows="4" placeholder="Names of guests, including yourself." required></textarea>
         </label>
       </div>
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
       <button type="submit">SEND</button>
     </form>
   </div>
@@ -163,6 +164,13 @@
     </div>
   </div>
   <footer>
+    <script type="text/javascript">
+      document.getElementById("mobile__menu--button").onclick = function() {expandMenu()};
+
+      function expandMenu() {
+        document.getElementById("nav__bottom").classList.toggle("active");
+      }
+    </script>
     <script src="/node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
     <script type="text/javascript">
       lightGallery(document.getElementById('lightgallery'), {

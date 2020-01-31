@@ -104,12 +104,42 @@ p {
     padding: 20px;
   }
 }
+.nav__middle .mobile__menu--button {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  .nav__middle .mobile__menu--button {
+    display: block;
+  }
+}
 .nav__bottom {
   padding: 20px;
 }
 @media screen and (max-width: 640px) {
   .nav__bottom {
-    display: none;
+    height: 0;
+    overflow-y: hidden;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav__bottom .nav__list-item {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .nav__bottom.active {
+    height: 250px;
+    padding: 20px;
   }
 }
 
@@ -151,8 +181,13 @@ p {
   background-image: url("../images/123.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   height: 800px;
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    background-attachment: unset;
+  }
 }
 .hero__image-holder {
   width: 100%;
@@ -178,6 +213,11 @@ p {
   text-align: center;
   text-shadow: 0px 0px 10px #3c3c3c;
 }
+@media screen and (max-width: 1024px) {
+  .hero__content {
+    top: 25%;
+  }
+}
 
 .information {
   background-color: #001626;
@@ -185,6 +225,11 @@ p {
   padding: 20px;
   height: 400px;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .information {
+    padding-top: 175px;
+  }
 }
 .information::before {
   content: url("../images/glitter.png");
