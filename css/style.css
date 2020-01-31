@@ -372,4 +372,8 @@ img#image-2 {
   height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

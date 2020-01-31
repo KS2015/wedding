@@ -103,17 +103,20 @@
     </div>
     <form name="RSVP Form" method="post" netlify>
       <div class="row">
-        <label>Name <input type="text" name="name" placeholder="Name"></label>
-        <label>Phone Number <input type="text" name="phonenumber" placeholder="Phone Number"></label>
+        <p class="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <label>Name <input type="text" name="name" placeholder="Name" required></label>
+        <label>Phone Number <input type="text" name="phonenumber" placeholder="Phone Number" required></label>
         <label>Are You Attending?
-          <select name="attending">
+          <select name="attending" required>
             <option selected disabled>Please select an option</option>
             <option value="">Yes, I'll be there!</option>
             <option value="">No, I can't make it</option>
           </select>
         </label>
         <label>Names of Guest(s)
-          <textarea name="" id="" cols="30" rows="4" placeholder="Names of guests, including yourself"></textarea>
+          <textarea name="" id="" cols="30" rows="4" placeholder="Names of guests, including yourself" required></textarea>
         </label>
       </div>
       <button type="submit">SEND</button>
