@@ -225,6 +225,7 @@ p {
   padding: 20px;
   height: 400px;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .information {
@@ -317,6 +318,8 @@ img#image-1 {
   img#image-1 {
     top: 50px;
     left: 0;
+    max-width: 100%;
+    height: auto;
   }
 }
 img#image-2 {
