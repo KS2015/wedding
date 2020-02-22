@@ -42,6 +42,22 @@ p {
   margin-bottom: 25px;
 }
 
+.border__bottom {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+.border__bottom::after {
+  content: "";
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
 .row, .row-full {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -104,6 +120,11 @@ p {
     padding: 20px;
   }
 }
+@media screen and (max-width: 405px) {
+  .nav__middle__title {
+    font-size: 28px;
+  }
+}
 .nav__middle .mobile__menu--button {
   display: none;
   cursor: pointer;
@@ -113,9 +134,14 @@ p {
   right: 25px;
   color: white;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 640px) {
   .nav__middle .mobile__menu--button {
     display: block;
+  }
+}
+@media screen and (max-width: 405px) {
+  .nav__middle .mobile__menu--button {
+    top: 13px;
   }
 }
 .nav__bottom {
@@ -204,6 +230,7 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  padding: 25px;
   z-index: 1;
   left: 0;
   right: 0;
@@ -238,11 +265,21 @@ p {
   top: 0;
   left: 0;
 }
+@media screen and (max-width: 405px) {
+  .information::before {
+    left: -150px;
+  }
+}
 .information::after {
   content: url("../images/glitter-right.png");
   position: absolute;
   top: 0;
   right: 0;
+}
+@media screen and (max-width: 405px) {
+  .information::after {
+    right: -150px;
+  }
 }
 
 .content {
@@ -276,7 +313,7 @@ p {
 }
 
 .paragraph {
-  padding: 175px 20px 125px;
+  padding: 50px 20px 75px;
   background-color: #001626;
   text-align: center;
   color: white;
@@ -295,6 +332,7 @@ p {
 
 .paragraph__image {
   position: relative;
+  top: 100px;
 }
 
 img#image-1 {
@@ -312,6 +350,7 @@ img#image-1 {
     display: block;
     margin: 0 auto;
     left: 0;
+    width: 100%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -343,7 +382,7 @@ img#image-2 {
 }
 
 .form {
-  margin-top: 300px;
+  margin-top: 100px;
   padding-top: 50px;
 }
 @media screen and (max-width: 1130px) {
@@ -422,6 +461,26 @@ img#image-2 {
 
 .hidden {
   display: none;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.wedding__party {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+.wedding__party .block {
+  color: white;
+  float: left;
+  margin: 25px;
+}
+.wedding__party .block small {
+  font-size: 75%;
+  color: #b3b3b3;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -44,7 +44,22 @@ p {
 .mb--25 {
   margin-bottom: 25px;
 }
-
+.border__bottom {
+  // border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: '';
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+}
 .row {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -97,6 +112,9 @@ p {
       @media screen and (max-width: 640px) {
         padding: 20px;
       }
+      @media screen and (max-width: 405px) {
+        font-size: 28px;
+      }
     }
     .mobile__menu--button {
       display: none;
@@ -106,8 +124,11 @@ p {
       top: 22px;
       right: 25px;
       color: white;
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 640px) {
         display: block;
+      }
+      @media screen and (max-width: 405px) {
+        top: 13px;
       }
     }
   }
@@ -193,6 +214,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 25px;
     z-index: 1;
     left: 0;
     right: 0;
@@ -222,12 +244,18 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    @media screen and (max-width: 405px) {
+      left: -150px;
+    }
   }
   &::after {
     content: url('../images/glitter-right.png');
     position: absolute;
     top: 0;
     right: 0;
+    @media screen and (max-width: 405px) {
+      right: -150px;
+    }
   }
 }
 
@@ -264,7 +292,7 @@ p {
   }
 }
 .paragraph {
-  padding: 175px 20px 125px;
+  padding: 50px 20px 75px;
   background-color: $navy;
   text-align: center;
   color: white;
@@ -280,6 +308,7 @@ p {
 }
 .paragraph__image {
   position: relative;
+  top: 100px;
 }
 img {
   &#image-1 {
@@ -295,6 +324,7 @@ img {
       display: block;
       margin: 0 auto;
       left: 0;
+      width: 100%;
     }
     @media screen and (max-width: 640px) {
       top: 50px;
@@ -321,7 +351,7 @@ img {
   margin-bottom: 50px;
 }
 .form {
-  margin-top: 300px;
+  margin-top: 100px;
   padding-top: 50px;
   @media screen and (max-width: 1130px) {
     margin: 100px 20px;
@@ -395,4 +425,22 @@ img {
 }
 .hidden {
   display: none;
+}
+.text--left {
+  text-align: left;
+}
+.wedding__party {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  .block {
+    color: white;
+    float: left;
+    margin: 25px;
+    small {
+      font-size: 75%;
+      color: darken(#fff, 30%);
+      margin-left: 10px;
+    }
+  }
 }

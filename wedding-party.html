@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kyle & Tara</title>
+
+  <link type="text/css" rel="stylesheet" href="/node_modules/lightgallery.js/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav__top">
+        <ul class="nav--left nav__list">
+          <li class="nav__list-item mr--40">September 19th, 2020</li>
+          <li class="nav__list-item mr--40">Maumee, OH</li>
+        </ul>
+        <!-- <ul class="nav--right nav__list">
+          <li class="nav__list-item">#Tara&Kyle</li>
+        </ul> -->
+      </div>
+      <div class="nav__middle">
+        <h1 class="nav__middle__title">KYLE & TARA</h1>
+        <span class="mobile__menu--button" id="mobile__menu--button">&#9776;</span>
+      </div>
+      <div class="nav__bottom" id="nav__bottom">
+        <ul class="nav__list nav--center">
+          <li class="nav__list-item mr--40"><a href="/" class="nav__list-item-link">HOME</a></li>
+          <!-- <li class="nav__list-item mr--40"><a href="" class="nav__list-item-link">TRAVEL & ACCOMODATIONS</a></li> -->
+          <li class="nav__list-item mr--40"><a href="https://www.amazon.com/wedding/share/kyle-and-tara" target="_blank"
+              class="nav__list-item-link">REGISTRY</a></li>
+          <li class="nav__list-item mr--40"><a href="/wedding-party.html"
+              class="nav__list-item-link nav--list-item-link--active">WEDDING PARTY</a></li>
+          <li class="nav__list-item mr--40"><a href="#photos" class="nav__list-item-link">PHOTOS</a></li>
+          <li class="nav__list-item"><a href="#rsvp" class="nav__list-item-link">RSVP</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container wedding__party">
+    <div class="row">
+      <div class="block">
+        <h1>Amber <small>Maid of Honor</small></h1>
+        <p>Amber and Tara met while working at Zoup in 2015. Instantly amber knew how funny Tara was and
+          they both had so much fun together. Amber is Tara’s best friend they have always been there for each other and
+          always know how to have a good time. </p>
+      </div>
+      <div class="block">
+        <h1>Jessica</h1>
+        <p>Jess is Tara’s older sister. Growing up Tara always knew she could go to Jess with anything. She now lives in
+          Florida but is still always there for Tara and Kyle. We love spending the weekend with her in Clearwater
+          whenever we get the chance! </p>
+      </div>
+      <div class="block">
+        <h1>Kaleigh</h1>
+        <p>Kaleigh is Kyle’s older sister. Kaleigh is a person that Tara can go to no matter what. Kyle and Tara enjoy
+          spending time down in Columbus where she lives. Kaleigh and Connor’s dog Winnie is Nola’s best friend. </p>
+      </div>
+      <div class="block">
+        <h1>Brittani</h1>
+        <p>Brittani and Tara met in 2014 when they started college together. They endured 2 years of relying on each
+          other for study sessions, homework sessions, clinical advice, the countless lunch dates, and phone calls. Not only
+          did Britt become a classmate she was an instant and lifelong friend.</p>
+      </div>
+      <div class="block">
+        <h1>Kayla</h1>
+        <p>Kayla and Tara met when kaylas husband, Scott (who is a groomsman) and Kyle worked together years ago. They
+          met at a work Christmas event. Every since they have always enjoyed the time spent together. </p>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="row">
+      <div class="block">
+        <h1>Alex <small>Best Man</small></h1>
+        <p>Alex and Kyle have been best friends since around 3rd grade. Even with attending different high schools and a
+          failed business plan, it’s only made their friendship stronger. </p>
+      </div>
+      <div class="block">
+        <h1>Connor</h1>
+        <p>Connor is Kyle’s brother in law and a great friend to Kyle. They have always shared the same interest in
+          sports, video games, and more. The four of us love hanging out and we always have a great time no matter what
+          we end up doing. </p>
+      </div>
+      <div class="block">
+        <h1>Scott</h1>
+        <p>Scott and Kyle worked together for awhile and became close friends after sitting next to each other at a work
+          Christmas party. Between time spent at the river, nights out, and game nights, Scott and Kyle always have a
+          fun time together. </p>
+      </div>
+      <div class="block">
+        <h1>Jordan</h1>
+        <p>Jordan and Kyle met through Scott. Jordan quickly became one of Kyle’s closest friends. We know we can always
+          count on Jordan for anything. Kyle and Jordan always have a great time together, shreddin’ it. </p>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="row">
+      <div class="block">
+        <h1>Makenna <small>Flower Girl</small></h1>
+        <p>Makenna is Tara’s Niece (Jessica’s daughter). Kyle and Tara have been together since she was born. She love’s
+          her aunt Tara and Uncle Kyle. If you see her at the wedding, ask her what Kyles doing. </p>
+      </div>
+      <div class="block">
+        <h1>Frankie <small>Ring Bearer</small></h1>
+        <p>Frankie is Tara’s Nephew (Jessica’s son). Frankie loves playing video games with Kyle. He always knows how to
+          makes us laugh.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <script type="text/javascript">
+      document.getElementById("mobile__menu--button").onclick = function() {expandMenu()};
+
+      function expandMenu() {
+        document.getElementById("nav__bottom").classList.toggle("active");
+      }
+    </script>
+    <script src="/node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script type="text/javascript">
+      lightGallery(document.getElementById('lightgallery'), {
+        thumbnail:true
+      });
+    </script>
+  </footer>
+</body>
+</html>
