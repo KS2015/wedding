@@ -84,7 +84,7 @@ p {
 }
 .row-full {
   @extend .row;
-  grid-template-columns: 100%;
+  grid-template-columns: 100% !important;
 }
 
 .font--light {
@@ -357,26 +357,43 @@ img {
     margin: 100px 20px;
   }
   .row {
-    grid-column-gap: 20px;
-    label:first-of-type {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 3;
+    // grid-column-gap: 20px;
+    grid-template-columns: 50% 50%;
+    
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 100%;
+      // grid-column-gap: 0;
     }
-    label:nth-of-type(3) {
+    // label:first-of-type {
+    //   grid-column-start: 1;
+    //   grid-column-end: 2;
+    //   grid-row-start: 1;
+    //   grid-row-end: 3;
+    // }
+    // label:nth-of-type(3) {
+    //   grid-column-start: 1;
+    //   grid-column-end: 3;
+    // }
+    // label:nth-of-type(4) {
+    //   grid-column-start: 1;
+    //   grid-column-end: 3;
+    // }
+    label:nth-of-type(5) {
       grid-column-start: 1;
       grid-column-end: 3;
-    }
-    label:nth-of-type(4) {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      @media screen and (max-width: 1024px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
     }
 
     label {
       color: white;
+      margin: 10px;
     }
-
+    select {
+      background-color: white;
+    }
     input, select, textarea {
       width: 100%;
       padding: 15px;

@@ -87,7 +87,7 @@ p {
 }
 
 .row-full {
-  grid-template-columns: 100%;
+  grid-template-columns: 100% !important;
 }
 
 .font--light {
@@ -391,24 +391,29 @@ img#image-2 {
   }
 }
 .form .row, .form .row-full {
-  grid-column-gap: 20px;
+  grid-template-columns: 50% 50%;
 }
-.form .row label:first-of-type, .form .row-full label:first-of-type {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+@media screen and (max-width: 1024px) {
+  .form .row, .form .row-full {
+    grid-template-columns: 100%;
+  }
 }
-.form .row label:nth-of-type(3), .form .row-full label:nth-of-type(3) {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.form .row label:nth-of-type(4), .form .row-full label:nth-of-type(4) {
+.form .row label:nth-of-type(5), .form .row-full label:nth-of-type(5) {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+@media screen and (max-width: 1024px) {
+  .form .row label:nth-of-type(5), .form .row-full label:nth-of-type(5) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 .form .row label, .form .row-full label {
   color: white;
+  margin: 10px;
+}
+.form .row select, .form .row-full select {
+  background-color: white;
 }
 .form .row input, .form .row-full input, .form .row select, .form .row-full select, .form .row textarea, .form .row-full textarea {
   width: 100%;
